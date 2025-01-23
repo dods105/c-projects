@@ -20,7 +20,7 @@ class Bus {
     void exit();
 };
 
-std::vector<Bus> buses; // Use a vector instead of an array
+std::vector<Bus> buses;
 
 void Bus::installBus() {
     std::cout << "Bus Number: ";
@@ -123,7 +123,7 @@ int main() {
         case 1: {
             Bus newBus;
             newBus.installBus();
-            buses.push_back(newBus); // Add the new bus to the vector
+            buses.push_back(newBus);
             break;
         }
         case 2:
