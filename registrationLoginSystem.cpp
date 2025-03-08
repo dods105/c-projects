@@ -4,7 +4,6 @@
 #include <vector>
 
 class RegistrationSystem{
-    
     std::string Name;
     std::string password;
     
