@@ -94,7 +94,7 @@ void Notebook::addEntry(){
         pageTitle.close();
         std::cout << "Notes now written." << "\n"; 
     }
-    system("PAUSE");
+    system("PAUSE"); 
 }
 
 void Notebook::deleteEntry(){
