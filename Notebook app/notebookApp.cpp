@@ -92,7 +92,7 @@ void Notebook::addEntry(){
 
         pageTitle << FullNote;
         pageTitle.close();
-        std::cout << "Notes now written." << "\n";
+        std::cout << "Notes now written." << "\n"; 
     }
     system("PAUSE");
 }
