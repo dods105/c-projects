@@ -52,7 +52,7 @@ void Notebook::showEntry(){
 }
 
 void Notebook::addEntry(){
-    std::fstream pageTitle;
+    std::fstream pageTitle; 
     while (true)
     {
         std::cout << "Type (1) to go back to Menu.\n";
