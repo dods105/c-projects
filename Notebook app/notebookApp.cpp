@@ -53,8 +53,7 @@ void Notebook::showEntry(){
 
 void Notebook::addEntry(){
     std::fstream pageTitle;
-    bool exists = 0;
-    while (!exists)
+    while (true)
     {
         std::cout << "Type (1) to go back to Menu.\n";
         std::cin.ignore();
