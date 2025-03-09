@@ -107,6 +107,7 @@ void Notebook::deleteEntry(){
             returnMenu = 1;
             break;
         }
+        
         Title += ".txt";
         std::fstream file(Title);
         if(file.is_open()){
