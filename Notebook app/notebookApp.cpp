@@ -64,9 +64,10 @@ void Notebook::addEntry(){
             returnMenu = 1;
             break;
         }
-
-        Title += ".txt";
-        pageTitle.open(Title);
+        else{
+            Title += ".txt";
+            pageTitle.open(Title);
+        }
 
         if(pageTitle.is_open()){
             std::cerr << "Note \"" + Title + "\" is already created.\n\n"; 
@@ -129,13 +130,14 @@ void Notebook::deleteEntry(){
 }
 
 int main(){
-    while(true){
+    bool exit = 0;
+    while(!exit){
         char operation;
         while(true){
-            std::cout << "\t\t\t\t(1) Add Notes\n\t\t\t\t(2) Read Notes\n\t\t\t\t(3) Delete Notes\n\n";
+            std::cout << "\t\t\t\t(1) Add Notes\n\t\t\t\t(2) Read Notes\n\t\t\t\t(3) Delete Notes\n\t\t\t\t(4) Exit\n\n";
             std::cout << "Type what to perform: ";
             std::cin >> operation;
-            if(operation == '1' || operation == '2' || operation == '3'){
+            if(operation == '1' || operation == '2' || operation == '3' || operation == '4'){
                 break;
             }
             std::cout << "Invalid Operation\n\n";
@@ -154,7 +156,11 @@ int main(){
             break;
         case '3':
             notes.deleteEntry();
+            break;
+        case '4':
+            exit = 1;
         }
-        
     }
+    std::cout << "\nNotebook App by Stacy Jordan\n";
+    return  0;
 }
