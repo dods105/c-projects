@@ -62,7 +62,8 @@ void Notebook::addEntry(){
         getline(std::cin, Title);
 
         if(Title == "1"){
-            system("PAUSE");
+            returnMenu = 1;
+            break;
         }
 
         Title += ".txt";
@@ -76,24 +77,24 @@ void Notebook::addEntry(){
         }
     }
 
-    pageTitle.open(Title, std::ios::out); //out -> write mode
-    std::cout << "notes: \n";
-    while(true){
-        getline(std::cin, Notes);
+    if(!returnMenu){
+        pageTitle.open(Title, std::ios::out); //out -> write mode
+        std::cout << "notes: \n";
+        while(true){
+            getline(std::cin, Notes);
 
-        if("END" == Notes){
-            break;
+            if("END" == Notes){
+                break;
+            }
+
+            FullNote += Notes + "\n";
         }
 
-        FullNote += Notes + "\n";
+        pageTitle << FullNote;
+        pageTitle.close();
+        std::cout << "Notes now written." << "\n";
     }
-
-    pageTitle << FullNote;
-    pageTitle.close();
-    std::cout << "Notes now written." << "\n";
-
     system("PAUSE");
-
 }
 
 void Notebook::deleteEntry(){
