@@ -69,7 +69,7 @@ bool RegistrationSystem::LogIn(){
 
 bool RegistrationSystem::verifyPassword(std::string name){
     std::string userPassword;
-    std::fstream userFile(name, std::ios::in);
+    std::fstream userFile(name, std::ios::in); // open in read mode
     getline(userFile, userPassword);
 
     std::string passwordHolder;
