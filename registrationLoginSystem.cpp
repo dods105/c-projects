@@ -1,7 +1,6 @@
 #include <iostream>
 #include <fstream>
 #include <string>
-#include <vector>
 
 class RegistrationSystem{
     std::string Name;
@@ -32,8 +31,6 @@ void RegistrationSystem::registration(){
 
     std::cout << "Account created successfully.\n";
 }
-
-std::vector <RegistrationSystem> users;
 
 bool RegistrationSystem::LogIn(){
     std::cout << "LOG IN\n\n";
